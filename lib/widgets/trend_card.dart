@@ -7,6 +7,11 @@ import '../features/trends/trend_detail_screen.dart';
 import '../features/providers/auth_provider.dart' as app_auth;
 import 'package:url_launcher/url_launcher.dart';
 
+/// Reusable widget displaying a single trend card with engagement features.
+///
+/// Shows trend information (title, summary, source), engagement metrics (likes/comments),
+/// and action buttons. Users can like/unlike trends, view comments, and navigate to
+/// detailed views. Handles real-time updates of engagement data from Firestore.
 class TrendCard extends StatefulWidget {
   final TrendModel trend;
 
@@ -33,12 +38,11 @@ class _TrendCardState extends State<TrendCard>
     try {
       final authProvider =
           Provider.of<app_auth.AuthProvider>(context, listen: false);
-      _currentUserName =
-          (authProvider.user?.name?.trim().isNotEmpty ?? false)
-              ? authProvider.user!.name.trim()
-              : (fbUser?.displayName?.trim().isNotEmpty ?? false)
-                  ? fbUser!.displayName!.trim()
-                  : 'User';
+      _currentUserName = (authProvider.user?.name?.trim().isNotEmpty ?? false)
+          ? authProvider.user!.name.trim()
+          : (fbUser?.displayName?.trim().isNotEmpty ?? false)
+              ? fbUser!.displayName!.trim()
+              : 'User';
     } catch (_) {
       // Provider not found; keep default anonymous name.
     }
@@ -412,23 +416,16 @@ class _TrendCardState extends State<TrendCard>
                           itemCount: comments.length,
                           itemBuilder: (_, i) {
                             final c = comments[i];
-                            final author = (c['author'] ?? 'Anonymous')
-                                .toString()
-                                .trim();
-                            final text =
-                                (c['text'] ?? '').toString().trim();
-                            final ts = DateTime.tryParse(
-                                c['timestamp'] ?? '');
-                            final timeStr = ts != null
-                                ? _formatDate(ts)
-                                : '';
+                            final author =
+                                (c['author'] ?? 'Anonymous').toString().trim();
+                            final text = (c['text'] ?? '').toString().trim();
+                            final ts = DateTime.tryParse(c['timestamp'] ?? '');
+                            final timeStr = ts != null ? _formatDate(ts) : '';
                             return ListTile(
                               dense: true,
                               title: Text(text),
                               subtitle: Text(
-                                author.isEmpty
-                                    ? timeStr
-                                    : '$author · $timeStr',
+                                author.isEmpty ? timeStr : '$author · $timeStr',
                                 style: const TextStyle(fontSize: 12),
                               ),
                             );
@@ -437,8 +434,8 @@ class _TrendCardState extends State<TrendCard>
                 ),
                 const Divider(height: 1),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 12, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   child: Row(
                     children: [
                       Expanded(

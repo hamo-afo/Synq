@@ -17,6 +17,11 @@ void main() async {
   runApp(const SynqApp());
 }
 
+/// Root application widget providing Firebase initialization and theme configuration.
+///
+/// Sets up the app with Provider for state management, configures routing,
+/// applies theme, and initializes Firebase services. This is the entry point
+/// for the entire Synq application.
 class SynqApp extends StatelessWidget {
   const SynqApp({super.key});
 

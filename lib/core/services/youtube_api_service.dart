@@ -2,6 +2,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../config/api_keys.dart';
 
+/// Service for fetching trending YouTube videos using the YouTube Data API.
+///
+/// Provides methods to retrieve trending videos by region, search terms, or video IDs.
+/// Handles API calls to YouTube's v3 API, parses responses, and returns structured
+/// video data including titles, descriptions, statistics, and thumbnails.
 class YouTubeApiService {
   // Using YouTube Data API v3
   static const String _baseUrl = 'https://www.googleapis.com/youtube/v3/videos';

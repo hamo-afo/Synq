@@ -1,5 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// Data model representing a user-generated post in the Synq app.
+///
+/// Encapsulates post content including the text, optional image URL, creation timestamp,
+/// and category. Used for displaying posts in feeds, managing user-generated content,
+/// and facilitating social interactions within the application.
 class PostModel {
   final String id;
   final String userId;

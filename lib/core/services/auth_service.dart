@@ -6,6 +6,12 @@ import '../../firebase_options.dart';
 import 'dart:convert';
 import '../../data/models/user_model.dart';
 
+/// Service for handling user authentication and account management.
+///
+/// Manages user registration, login, logout, password reset, email verification,
+/// and user profile operations. Integrates with Firebase Authentication for auth
+/// state management and Firestore for user data persistence. Also handles social
+/// authentication and token management for external API calls.
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

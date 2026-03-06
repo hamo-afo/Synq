@@ -1,5 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// Data model representing a trend from various sources (YouTube, stocks, political news).
+///
+/// This model encapsulates trend information including title, category, summary, and content.
+/// It also tracks engagement metrics like likes and comments, and metadata about when the
+/// trend was fetched. This is used throughout the app to display trend information to users.
 class TrendModel {
   final String id;
   final String title;

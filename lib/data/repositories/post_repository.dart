@@ -4,6 +4,11 @@ import '../models/post_model.dart';
 import '../models/comment_model.dart';
 import '../firebase/firestore_paths.dart';
 
+/// Repository for managing user-generated posts and comments in Firestore.
+///
+/// Provides methods to create, read, update, and delete posts. Handles post metadata
+/// like timestamps, user associations, and manages comments on posts. Serves as the
+/// data access layer for post-related operations throughout the app.
 class PostRepository {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 

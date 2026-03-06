@@ -2,6 +2,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 // correct path from core/services
 
+/// Low-level Firestore wrapper service providing direct access to database operations.
+///
+/// Abstracts Firestore operations like reading, writing, and deleting documents.
+/// Provides a clean interface for CRUD operations and real-time data streaming.
+/// Used by repositories to persist and retrieve data from the Firestore database.
 class FirestoreService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 

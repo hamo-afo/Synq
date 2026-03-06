@@ -5,6 +5,11 @@ import 'trend_feed.dart';
 import '../../core/services/api_trend_fetcher.dart';
 import '../../routing/route_names.dart';
 
+/// Main home screen displaying the trend feed and navigation to trend categories.
+///
+/// Serves as the primary dashboard after login, showing real-time trends from various
+/// sources (YouTube, stocks, political news), with a navigation drawer for accessing
+/// different trend categories, reports, settings, and admin features.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 

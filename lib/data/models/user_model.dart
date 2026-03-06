@@ -1,6 +1,11 @@
 // lib/data/models/user_model.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// Data model representing a user in the Synq application.
+///
+/// Contains user authentication details (uid, email), profile information (name, role),
+/// and account metadata (createdAt, isAdmin). This model is used to manage user sessions,
+/// permissions, and profile data retrieved from Firebase Authentication and Firestore.
 class UserModel {
   final String uid;
   final String name;

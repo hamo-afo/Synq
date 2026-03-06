@@ -17,6 +17,11 @@ import 'package:synq/features/trends/trend_search_screen.dart';
 import 'package:synq/features/admin/admin_dashboard.dart';
 import 'package:synq/features/admin/user_management.dart';
 
+/// Central routing configuration managing navigation throughout the Synq app.
+///
+/// Defines all named routes and route generation logic. Handles page transitions,
+/// deep linking, and route parameters. Manages both authenticated and unauthenticated
+/// navigation flows based on user authentication state.
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {

@@ -2,6 +2,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../config/api_keys.dart';
 
+/// Service for fetching stock market data using the Alpha Vantage API.
+///
+/// Retrieves stock trends including top gainers and losers, market data,
+/// intraday quotes, and historical pricing. Integrates with Alpha Vantage's
+/// free tier API to provide up-to-date financial information.
 class StockApiService {
   // Using Alpha Vantage API (free tier available)
   static const String _baseUrl = 'https://www.alphavantage.co/query';

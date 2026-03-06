@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../data/models/report_model.dart';
 
+/// State management provider for report data and generation.
+///
+/// Manages the list of reports, handles report creation and updates, and provides
+/// real-time synchronization with Firestore. Widgets consume this provider to display
+/// reports and trigger report generation, with automatic UI updates when data changes.
 class ReportProvider extends ChangeNotifier {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 

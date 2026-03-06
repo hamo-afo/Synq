@@ -7,7 +7,8 @@ import '../models/report_model.dart';
 /// (daily / weekly / monthly counts, top trends by likes, engagement metrics,
 /// top stock symbols etc). These are implemented client-side by fetching the
 /// relevant documents and aggregating locally because Firestore lacks flexible
-/// server-side aggregations in many projects.
+/// server-side aggregations in many projects. Handles report generation, caching,
+/// and statistical analysis of trend and engagement data.
 class ReportRepository {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final CollectionReference<Map<String, dynamic>> _trends;

@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import '../../core/services/auth_service.dart';
 import '../../data/models/user_model.dart';
 
+/// State management provider for user authentication and session management.
+///
+/// Manages global auth state including current user data, loading states, and
+/// authentication operations. Notifies listeners when auth state changes, enabling
+/// reactive updates across the UI. Serves as the single source of truth for auth info.
 class AuthProvider extends ChangeNotifier {
   final AuthService _service = AuthService();
 

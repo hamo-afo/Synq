@@ -4,6 +4,11 @@ import '../../routing/route_names.dart';
 import '../../features/providers/auth_provider.dart';
 import '../../core/services/admin_service.dart';
 
+/// Admin control panel for managing the application and viewing analytics.
+///
+/// Provides admin users with tools to manage users, view database content,
+/// generate reports, monitor statistics, create and manage content, and access
+/// system administration features. Acts as the central hub for admin operations.
 class AdminDashboard extends StatelessWidget {
   const AdminDashboard({super.key});
 

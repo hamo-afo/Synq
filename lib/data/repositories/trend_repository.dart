@@ -1,6 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/trend_model.dart';
 
+/// Repository for managing trend data from Firestore.
+///
+/// Handles all CRUD operations for trends, including fetching trends by category,
+/// filtering by date range, searching trends, managing likes and comments,
+/// and syncing trends with various external APIs (YouTube, stocks, political news).
+/// Acts as the intermediary between the Firestore database and the rest of the app.
 class TrendRepository {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 

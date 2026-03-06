@@ -2,6 +2,11 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../config/api_keys.dart';
 
+/// Service for fetching political news and updates from NewsAPI.
+///
+/// Provides methods to search for political news, government updates, and election
+/// coverage. Uses NewsAPI to aggregate news from multiple sources with filtering
+/// by keywords, country, and publication date.
 class PoliticalNewsApiService {
   // Using NewsAPI for political news
   static const String _newsApiUrl = 'https://newsapi.org/v2/everything';

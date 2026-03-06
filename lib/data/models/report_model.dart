@@ -1,5 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// Data model representing trend reports (daily, weekly, or monthly).
+///
+/// Stores report metadata including type (daily/weekly/monthly), title, description,
+/// and generation timestamp. This model is used to display analytical reports to users
+/// and organize trend analysis by time periods.
 class ReportModel {
   final String id;
   final String type; // daily/weekly/monthly

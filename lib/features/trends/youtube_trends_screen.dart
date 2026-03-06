@@ -6,6 +6,11 @@ import '../../data/models/trend_model.dart';
 import '../../widgets/trend_card.dart';
 import '../../routing/route_names.dart';
 
+/// Screen displaying YouTube trending videos and content.
+///
+/// Fetches YouTube trends from the server and displays them in a scrollable list
+/// with detail views. Users can interact with trends through likes and comments,
+/// and navigate to YouTube links for additional content.
 class YouTubeTrendsScreen extends StatefulWidget {
   const YouTubeTrendsScreen({super.key});
 
