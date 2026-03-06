@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "642877606526",
+    "project_id": "synq-d18b1",
+    "storage_bucket": "synq-d18b1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642877606526:android:a3f46571a7128dad47e62f",
+        "android_client_info": {
+          "package_name": "com.example.synq"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJEDUNj9FGLzl-U6IW7Pmpd-y64MZGzQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,53 @@
+name: synq
+description: "Synq - Trends and Reports App"
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Firebase Core Packages
+  firebase_core: ^2.20.0
+  firebase_auth: ^4.6.4
+  cloud_firestore: ^4.17.5
+  firebase_storage: ^11.2.7
+
+  # State management & utilities
+  provider: ^6.1.5
+  fluttertoast: ^8.2.2
+  intl: ^0.18.1
+  shared_preferences: ^2.3.2
+
+  # Media & UI
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.1
+  shimmer: ^2.0.0
+  flutter_svg: ^2.0.10+1
+
+  # Networking
+  http: ^1.2.2
+  connectivity_plus: ^6.1.0
+
+  # External actions
+  url_launcher: ^6.3.0
+
+  # Charts & Data Export
+  fl_chart: ^0.68.0
+  csv: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
