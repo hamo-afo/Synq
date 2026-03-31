@@ -1,29 +1,20 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
+# ============================================
+# SECRETS & API KEYS (NEVER COMMIT)
+# ============================================
+lib/core/config/api_keys.dart
+.env
+.env.local
+.env.*.local
+.env.production.local
+firebase.json
+google-services.json
+GoogleService-Info.plist
+android/app/google-services*.json
+ios/Runner/GoogleService-Info.plist
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
+# ============================================
+# Flutter/Dart/Pub Related
+# ============================================
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
@@ -32,6 +23,43 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+coverage/
+.coverage
+
+# ============================================
+# Build Artifacts
+# ============================================
+# Android
+/android/app/debug
+/android/app/profile
+/android/app/release
+android/.gradle/
+android/gradle/
+android/build/
+android/local.properties
+*.apk
+*.aab
+
+# iOS
+ios/Pods/
+ios/Podfile.lock
+ios/Flutter/Generated.xcconfig
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner.xcworkspace/
+*.ipa
+
+# Web
+web/assets/AssetManifest.json
+web/assets/FontManifest.json
+
+# ============================================
+# Generated Files
+# ============================================
+lib/firebase_options.dart
+lib/l10n/generated_localizations.dart
 
 # Symbolication related
 app.*.symbols
@@ -39,13 +67,45 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
-lib/firebase_options.dart
-android/app/google-services*.json
-*.env
-.env
-firebase.json
-firestore.rules
+# ============================================
+# IDE & Editor
+# ============================================
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============================================
+# Miscellaneous
+# ============================================
+*.class
+*.log
+*.pyc
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+temp/
+tmp/
+*.orig
+*.bak
